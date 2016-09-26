@@ -3,8 +3,9 @@
 // styles in src/style directory are applied to the whole page
 body {
     color: #333;
-    background-color: $sky-blue;
+    background-color: $med-gray;
+    margin-top: 60px;
 }
 a {
-    color: #03A9F4;
+    color: $dark-gray;
 }

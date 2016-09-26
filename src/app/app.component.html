@@ -22,14 +22,16 @@
 <main>
   <div class="container">
 
-      <h1>Hello from {{api.title}}!</h1>
+      <h1>{{api.title}}!</h1>
     <!-- Images (and assets) are parsed and loaded from within the public directory -->
-    <img src="/img/angular.png">
+    <!--<img src="/img/angular.png">-->
 
     <router-outlet></router-outlet>
 
   </div><!-- /.container -->
 </main>
 <footer>
-  <a [href]="url">Webpack Angular 2 Starter</a>
+  <div class="container">
+    <p>{{ message }}</p>
+  </div>
 </footer>
