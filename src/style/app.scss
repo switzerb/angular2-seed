@@ -1,6 +1,9 @@
+@import "variables";
+
 // styles in src/style directory are applied to the whole page
 body {
     color: #333;
+    background-color: $sky-blue;
 }
 a {
     color: #03A9F4;
