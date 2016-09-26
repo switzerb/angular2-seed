@@ -1,12 +1,8 @@
-# angular2-webpack
+# angular2-webpack seed
 
-[![Dependency Status](https://david-dm.org/preboot/angular2-webpack/status.svg)](https://david-dm.org/preboot/angular2-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/preboot/angular2-webpack/dev-status.svg)](https://david-dm.org/preboot/angular2-webpack#info=devDependencies)
-[![Join the chat at https://gitter.im/preboot/angular2-webpack](https://badges.gitter.im/preboot/angular2-webpack.svg)](https://gitter.im/preboot/angular2-webpack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-**Note: This guide is following the Angular's [Style Guide](http://angular.io/styleguide) so I will be changing conventions here and there eventually. You are free to use your own conventions with this starter.**
-**Note 2: There is no conventions yet for RC5 on the style guide so there will be a future update here for that.**
-
-A complete, yet simple, starter for Angular 2 using Webpack.
+A complete, yet simple, starter for Angular 2 using Webpack, taken from here and modified for my own purposes:
+https://github.com/preboot/angular2-webpack
 
 This seed repo serves as an Angular 2 starter for anyone looking to get up and running with Angular 2 and TypeScript fast. Using [Webpack](http://webpack.github.io/) for building our files and assisting with boilerplate. We're also using Protractor for our end-to-end story and Karma for our unit tests.
 * Best practices in file and application organization for [Angular 2](https://angular.io/).
@@ -20,23 +16,15 @@ This seed repo serves as an Angular 2 starter for anyone looking to get up and r
 
 >Warning: Make sure you're using the latest version of Node.js and NPM
 
-[Is Angular 2 Ready Yet?](http://splintercode.github.io/is-angular-2-ready/)
-
 ### Quick start
 
 > Clone/Download the repo then edit `app.ts` inside [`/src/app/app.component.ts`](/src/app/app.component.ts)
 
 ```bash
 # clone our repo
-$ git clone https://github.com/preboot/angular2-webpack.git my-app
-
-# change directory to your app
-$ cd my-app
-
-# install the dependencies with npm
+$ git clone https://github.com/switzerb/angular2-seed.git repo-name
+$ cd repo-name
 $ npm install
-
-# start the server
 $ npm start
 ```
 go to [http://localhost:8080](http://localhost:8080) in your browser.
@@ -113,43 +101,6 @@ You can now go to `/dist` and deploy that to your server!
 You can generate api docs (using [TypeDoc](http://typedoc.io/)) for your code with the following:
 
 * `npm run docs`
-
-# FAQ
-
-#### Do I need to add script / link tags into index.html ?
-
-No, Webpack will add all the needed Javascript bundles as script tags and all the CSS files as link tags. The advantage is that you don't need to modify the index.html every time you build your solution to update the hashes.
-
-#### How to include external angular 2 libraries ?
-
-It's simple, just install the lib via npm and import it in your code when you need it. Don't forget that you need to configure some external libs in the [bootstrap](https://github.com/preboot/angular2-webpack/blob/master/src/main.ts) of your application.
-
-#### How to include external css files such as bootstrap.css ?
-
-Just install the lib and import the css files in [vendor.ts](https://github.com/preboot/angular2-webpack/blob/master/src/vendor.ts). For example this is how to do it with bootstrap:
-
-```sh
-npm install bootstrap@next --save
-```
-
-And in [vendor.ts](https://github.com/preboot/angular2-webpack/blob/master/src/vendor.ts) add the following:
-
-```ts
-import 'bootstrap/dist/css/bootstrap.css';
-```
-
-# TypeScript
-
-> To take full advantage of TypeScript with autocomplete you would have to use an editor with the correct TypeScript plugins.
-
-## Use a TypeScript-aware editor
-
-We have good experience using these editors:
-
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Webstorm 11+](https://www.jetbrains.com/webstorm/download/)
-* [Atom](https://atom.io/) with [TypeScript plugin](https://atom.io/packages/atom-typescript)
-* [Sublime Text](http://www.sublimetext.com/3) with [Typescript-Sublime-Plugin](https://github.com/Microsoft/Typescript-Sublime-plugin#installation)
 
 # License
 
