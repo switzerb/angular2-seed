@@ -77,6 +77,7 @@
     "protractor": "^3.1.1",
     "raw-loader": "0.5.1",
     "remap-istanbul": "^0.6.4",
+    "resolve-url": "^0.2.1",
     "rimraf": "^2.5.1",
     "sass-loader": "^4.0.0",
     "shelljs": "^0.7.0",
