@@ -190,6 +190,14 @@ module.exports = function makeWebpackConfig() {
         chunksSortMode: 'dependency'
       }),
 
+      //Reference jquery as a global variable for bootstrap reference
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jquery: "jquery",
+        jQuery: "jquery",
+        "windows.jQuery": "jquery"
+      }),
+
       // Extract css files
       // Reference: https://github.com/webpack/extract-text-webpack-plugin
       // Disabled when in test mode or not in build mode
