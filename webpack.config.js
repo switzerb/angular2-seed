@@ -118,7 +118,7 @@ module.exports = function makeWebpackConfig() {
       {
         test: /\.css$/,
         exclude: root('src', 'app'),
-        loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
+        loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?resolve-url?sourceMap!postcss')
       },
       // all css required in src/app files will be merged in js files
       {test: /\.css$/, include: root('src', 'app'), loader: 'raw!postcss'},
@@ -129,7 +129,7 @@ module.exports = function makeWebpackConfig() {
       {
         test: /\.scss$/,
         exclude: root('src', 'app'),
-        loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap!postcss!sass')
+        loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?resolve-url?sourceMap!postcss!sass')
       },
       // all css required in src/app files will be merged in js files
       {test: /\.scss$/, exclude: root('src', 'style'), loader: 'raw!postcss!sass'},
@@ -183,6 +183,14 @@ module.exports = function makeWebpackConfig() {
       new HtmlWebpackPlugin({
         template: './src/public/index.html',
         chunksSortMode: 'dependency'
+      }),
+
+      //Reference jquery as a global variable for bootstrap reference
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jquery: "jquery",
+        jQuery: "jquery",
+        "windows.jQuery": "jquery"
       }),
 
       // Extract css files
