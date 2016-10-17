@@ -1,6 +1,9 @@
 import 'core-js/client/shim';
 import 'reflect-metadata';
+import 'intl';
+import 'ie-shim';
 require('zone.js/dist/zone');
+require('intl/locale-data/jsonp/en.js');
 
 import 'ts-helpers';
 
